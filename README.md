@@ -1,5 +1,5 @@
 # Malaria-Testing
-static -  contains images,bootstrap,css,js needed for html pages
+static -  contains images,bootstrap,css,js needed for html pages<br>
 templates - contains html pages
 Malaria Prediction.ipynb - contains all algorithms used to train and test
 malaria model.ipynb - contains XGBoost algorithm which needs to be converted into model.pkl file
