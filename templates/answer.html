@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Malaria Testing</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway:400,600|Righteous&display=swap"
+    rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{{url_for('static',filename='style.css')}}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{url_for('static',filename='responsive.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>
+             Test For Malaria
+            </span>
+          </a>
+
+          <div class="navbar-collapse" id="">
+            <div class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3">
+              <!-- <form class="form-inline mb-3 mb-lg-0 ">
+                <button class="btn  my-sm-0 nav_search-btn" type="submit"></button>
+              </form> -->
+            <!--  <ul class="navbar-nav  mr-5">
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="service.html">
+                    <span>Login</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          -->
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="feature.html">Features</a>
+                <a href="contact.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- feature section  -->
+  <section class="feature_section layout_padding">
+    <div class="container">
+      <h2 class="text-uppercase">
+        Test
+      </h2>
+    </div>
+    </div>
+      <form  style="margin:auto;width: auto;" action="{{url_for('result')}}" method="POST">
+     <!--  <div class="row">
+        <div class="col">
+         <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name">
+        </div>
+      </div>
+      <br>
+        <div class="form-outline w-25 mb-4 ">
+          <label for="exampleFormControlInput1" ></label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+      -->
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect1">Choose gender:</label>
+          <select class="form-control" id="sex" name="sex">
+          <option disabled selected hidden>Select one</option>
+          <option value="0">Male</option>
+          <option value="1">Female</option>
+          </select>
+        </div>
+      
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you have Fever?</label>
+          <select class="form-control" id="fever" name="fever">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you have Cold?</label>
+          <select class="form-control" id="cold" name="cold">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Cold with shivering(Rigor)?</label>
+          <select class="form-control" id="rigor" name="rigor">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+      
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you feel overtired(fatigue)?</label>
+          <select class="form-control" id="fatigue" name="fatigue">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you have headche?</label>
+          <select class="form-control" id="headace" name="headace">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you feel bitter tongue?</label>
+          <select class="form-control" id="bitter_tongue" name="bitter_tongue">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you feel vomitting?</label>
+          <select class="form-control" id="vomitting" name="vomitting">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+        
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you have diarrhea?</label>
+          <select class="form-control" id="diarrhea" name="diarrhea">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+        
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you feel irregular movement of body(Convulsion)?</label>
+          <select class="form-control" id="Convulsion" name="Convulsion">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you have Anemia?</label>
+          <select class="form-control" id="Anemia" name="Anemia">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Did your skin turn yellow(Jaundice) ?</label>
+          <select class="form-control" id="jundice" name="jundice">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Urine color changed to brown(Coca cola urine)?</label>
+          <select class="form-control" id="cocacola_urine" name="cocacola_urine">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you have low sugar(Hypoglycemia)?</label>
+          <select class="form-control" id="hypoglycemia" name="hypoglycemia">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Do you feel weakness(Prostraction)?</label>
+          <select class="form-control" id="prostraction" name="prostraction">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <div class="form-outline w-25 mb-4">
+          <label for="exampleFormControlSelect2">Is your body temperature above 42 degree celcius(Hyperpyrexia)?</label>
+          <select class="form-control" id="hyperpyrexia" name="hyperpyrexia">
+            <option disabled selected hidden>Select one</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+      
+      
+        <button type="submit" class="btn btn-primary mb-2">Predict</button>  
+        
+    
+      </form> 
+       
+  </section>
+
+
+</body>
+</html>
